@@ -1,0 +1,88 @@
+1.git config :
+
+Sets configuration values for your user name, email, gpg key, preferred diff algorithm, file formats and more. 
+Example: git config --global user.name "My Name" 
+         git config --global user.email "user@domain.com"
+
+2.git init :
+
+Initializes a git repository – creates the initial ‘.git’ directory in a new or in an existing project. 
+Example: cd /home/user/my_new_git_folder/ git init
+ 
+3.git add :
+
+Adds file's changes in working directory to index. 
+Example: git add file name //only the given file will be added
+         git add . //all the files will be added to the index  
+
+4.git commit
+
+Takes all of the changes written in the index, creates a new commit object pointing to it 
+and sets the branch to point to that new commit. 
+Examples: git commit -m ‘committing added changes’ 
+          git commit -am ‘committing all changes, equals to git add and git commit’ //commits all the edited files directly
+                                                                                     to repository
+
+5.git log
+
+   Shows a listing of commits on a branch including the corresponding details.
+     Example: git log
+   commit 1f07fc6f3118c8c50dde160f7697a44d94ec1811 (HEAD -> master)
+   Author: sohana <sohana1902@gmail.com>
+   Date:   Wed Sep 13 01:02:32 2017 +0600
+ 
+   *git log --author="author_name" //it shows the commits done only by the given author
+   
+
+6.git status
+
+Shows you the status of files in the index versus the working directory. It will list out files that are 
+untracked (only in your working directory), modified (tracked but not yet updated in your index), 
+and staged (added to your index and ready for committing).
+    Example: git status
+    On branch master
+ Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   command.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        new.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+7.git diff
+  
+      Generates patch files or statistics of differences between paths or files in your git repository,
+       or your index or your working directory. 
+        Example: git diff //before adding or commiting a file which is edited it will show the changes beween the working
+                             directory and the repository
+                 git diff --staged //after adding a file which is edited it will show the changes between the staging area
+                                     and the repository 
+            
+
+8.git rm
+
+  Removes files from your index and your working directory so they will not be tracked.after removing a file we need 
+  to commit again to remove it from the repository also.
+    Example: git rm filename
+
+9.clear
+
+   clears all the texts in the screen
+
+10.git mv
+
+   git mv 1st_file_name 2nd_file_name //renames the 1st file name with the second file name in the working directory also
+   git mv 1st_file_name folder_name/2nd_file_name  //the 1st file will be saved in the folder with the second file name
+
+11.git checkout
+
+   git checkout -filename //if unwanted edits are made it will remove the changes if the file is not commited
+
+ 
+
+   
